@@ -1,0 +1,37 @@
+#include <avr/io.h>
+#define F_CPU 12000000
+#include <util/delay.h>
+#include "adc.h"				//header file for ADC
+#include "lcd118010.h"
+#include "uart.h"
+
+int main(void)
+{
+ int x,y,z;
+ 
+ adc_init();					//initialization of ADC
+ lcd_init();
+ uart_init();
+ while(1)
+  {
+   lcd_gotoxy(0,0);
+    lcd_showvalue(getdata(0));	
+   lcd_char(',');
+    lcd_showvalue(getdata(1));	
+   lcd_char(',');
+    lcd_showvalue(getdata(2));	
+   lcd_char(',');
+   
+      
+                                                               
+
+
+ 
+   
+  
+     uart_char('5');
+     lcd_gotoxy(1,1);
+     lcd_showvalue('5');
+  
+  
+   }

@@ -1,0 +1,6 @@
+Use  motors on PORT B i.e MO,1,2,3
+
+M0  -ve  motor pin
+M1   +ve   "         "
+M2    +ve   "         "
+M3    -ve    "         "
